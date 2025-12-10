@@ -33,7 +33,6 @@ public class arrowSpawner : MonoBehaviour
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         direction = mousePosition - spawnerPosition;
         transform.right = direction;
-        Debug.Log(direction);
 
         if (Input.GetMouseButtonDown(0))
         {

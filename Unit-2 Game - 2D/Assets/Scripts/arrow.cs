@@ -30,5 +30,10 @@ public class arrow : MonoBehaviour
         hasHit = true;
         rb.linearVelocity = Vector2.zero;
         rb.bodyType = RigidbodyType2D.Kinematic;
+        
+        if (collision.gameObject.CompareTag("Slime"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
