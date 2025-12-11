@@ -3,14 +3,17 @@ using UnityEngine;
 
 public class arrow : MonoBehaviour
 {
+    private const float V = 5f;
     Rigidbody2D rb;
     bool hasHit;
-    float lifeSpan = 5f; 
+    readonly float lifeSpan = V;
+    BoxCollider2D arrowCollider;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        arrowCollider = GetComponent<BoxCollider2D>();
         Destroy(gameObject, lifeSpan);
     }
 
@@ -30,6 +33,7 @@ public class arrow : MonoBehaviour
         hasHit = true;
         rb.linearVelocity = Vector2.zero;
         rb.bodyType = RigidbodyType2D.Kinematic;
+        arrowCollider.enabled = false;
         
         if (collision.gameObject.CompareTag("Slime"))
         {

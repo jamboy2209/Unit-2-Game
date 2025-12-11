@@ -1,6 +1,7 @@
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -14,15 +15,21 @@ public class EnemySpawner : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        StartCoroutine(spawnTimer(5f));
+        StartCoroutine(SpawnTimer(2f));
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
+        if (slimesSpawned == 25)
+        {
+            if(Slime_1.activeInHierarchy == false && Slime_2.activeInHierarchy == false && Slime_3.activeInHierarchy == false)
+            {
+                SceneManager.LoadScene("GameOver");
+            }
+        }
     }
 
-    IEnumerator spawnTimer(float seconds)
+    IEnumerator SpawnTimer(float seconds)
     {
         int SlimePicker = Random.Range(1, 4);
         Debug.Log(SlimePicker);
@@ -42,10 +49,11 @@ public class EnemySpawner : MonoBehaviour
 
         yield return new WaitForSeconds(seconds);
 
-        slimesSpawned++;
-        if (slimesSpawned > 25)
+        slimesSpawned += 1;
+
+        if (slimesSpawned < 25)
         {
-            StartCoroutine(spawnTimer(5f));
+            StartCoroutine(SpawnTimer(2f));
         }
     }
 }

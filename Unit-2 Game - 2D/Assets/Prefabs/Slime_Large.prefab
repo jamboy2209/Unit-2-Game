@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 1574179292477120907}
   - component: {fileID: 169449272494142472}
   - component: {fileID: -8872345491293820580}
+  - component: {fileID: 4931562528800509326}
   m_Layer: 7
   m_Name: Slime_Large
   m_TagString: Slime
@@ -216,7 +217,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -228,6 +229,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4931562528800509326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5577472768984073623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35d03480970fb9478a1117b17ecf438, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9197026831552353002
 GameObject:
   m_ObjectHideFlags: 0

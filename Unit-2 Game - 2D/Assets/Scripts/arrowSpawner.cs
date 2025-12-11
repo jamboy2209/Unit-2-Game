@@ -36,7 +36,7 @@ public class arrowSpawner : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            shoot();
+            Shoot();
         }
 
         for (int i = 0; i < numOfPoints; i++)
@@ -45,7 +45,7 @@ public class arrowSpawner : MonoBehaviour
         }
     }
 
-    void shoot()
+    void Shoot()
     {
         GameObject newArrow = Instantiate(arrow, spawnPoint.position, spawnPoint.rotation);
         newArrow.GetComponent<Rigidbody2D>().linearVelocity = transform.right * power;
@@ -53,7 +53,7 @@ public class arrowSpawner : MonoBehaviour
 
     Vector2 PointPosition(float t)
     {
-        Vector2 position = (Vector2)spawnPoint.position + (direction.normalized * power * t) + 0.5f * Physics2D.gravity * (t * t);
+        Vector2 position = (Vector2)spawnPoint.position + (power * t * direction.normalized) + (t * t) * 0.5f * Physics2D.gravity;
         return position;
     }
 

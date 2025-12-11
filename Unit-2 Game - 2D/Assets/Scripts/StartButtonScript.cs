@@ -6,7 +6,7 @@ public class StartButtonScript : MonoBehaviour
 {
     public GameObject levelSelect;
     public GameObject startButton;
-    Vector3 position = new Vector3(192f, 767f, 0f);
+    Vector3 position = new(192f, 767f, 0f);
 
     public void WhenClicked()
     {

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollisionDetector : MonoBehaviour
 {
@@ -24,13 +25,6 @@ public class CollisionDetector : MonoBehaviour
             size = "Large";
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Arrow"))

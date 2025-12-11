@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8094222451860942583}
   - component: {fileID: 8266250364129806019}
   - component: {fileID: -9167674248064251835}
+  - component: {fileID: 8287081260781288478}
   m_Layer: 7
   m_Name: Slime_Small
   m_TagString: Slime
@@ -182,7 +183,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -194,3 +195,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8287081260781288478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6647014042680075816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35d03480970fb9478a1117b17ecf438, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
