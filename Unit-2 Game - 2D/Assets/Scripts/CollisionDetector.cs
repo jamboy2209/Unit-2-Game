@@ -9,9 +9,12 @@ public class CollisionDetector : MonoBehaviour
     public Transform Spawnpoint_1;
     public Transform Spawnpoint_2;
 
+    public GameObject audioPlayer;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
         if (gameObject.transform.localScale.x == 1)
         {
             size = "Small";
@@ -31,16 +34,22 @@ public class CollisionDetector : MonoBehaviour
         {
             if (size == "Small")
             {
+                Instantiate(audioPlayer, transform.position, Quaternion.identity);
+
                 Destroy(gameObject);
             } 
             else if (size == "Medium")
             {
+                Instantiate(audioPlayer, transform.position, Quaternion.identity);
+
                 Instantiate(SmallSlime, Spawnpoint_1.position, Spawnpoint_1.rotation);
                 Instantiate(SmallSlime, Spawnpoint_2.position, Spawnpoint_2.rotation);
                 Destroy(gameObject);
             }
             else if (size == "Large")
             {
+                Instantiate(audioPlayer, transform.position, Quaternion.identity);
+
                 Instantiate(MediumSlime, Spawnpoint_1.position, Spawnpoint_1.rotation);
                 Instantiate(MediumSlime, Spawnpoint_2.position, Spawnpoint_2.rotation);
                 Destroy(gameObject);

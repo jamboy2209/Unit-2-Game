@@ -202,6 +202,7 @@ MonoBehaviour:
   MediumSlime: {fileID: 7676303729552877215, guid: c9dc26b1cffc6e14ea3271894d71be76, type: 3}
   Spawnpoint_1: {fileID: 3921479590624776280}
   Spawnpoint_2: {fileID: 1781596086870385644}
+  audioPlayer: {fileID: 6417997414236543412, guid: 55e2989a671f05946a88fe67dd7460bb, type: 3}
 --- !u!50 &-8872345491293820580
 Rigidbody2D:
   serializedVersion: 5

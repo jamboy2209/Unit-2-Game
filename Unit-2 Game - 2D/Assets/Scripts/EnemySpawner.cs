@@ -10,29 +10,19 @@ public class EnemySpawner : MonoBehaviour
     public GameObject Slime_3;
     public Transform spawnPoint;
 
+    public GameObject endGame;
+
     int slimesSpawned = 0;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        StartCoroutine(SpawnTimer(2f));
-    }
-
-    private void Update()
-    {
-        if (slimesSpawned == 25)
-        {
-            if(Slime_1.activeInHierarchy == false && Slime_2.activeInHierarchy == false && Slime_3.activeInHierarchy == false)
-            {
-                SceneManager.LoadScene("GameOver");
-            }
-        }
+        StartCoroutine(SpawnTimer(1f));
     }
 
     IEnumerator SpawnTimer(float seconds)
     {
         int SlimePicker = Random.Range(1, 4);
-        Debug.Log(SlimePicker);
 
         if (SlimePicker == 1)
         {
@@ -53,7 +43,12 @@ public class EnemySpawner : MonoBehaviour
 
         if (slimesSpawned < 25)
         {
-            StartCoroutine(SpawnTimer(2f));
+            StartCoroutine(SpawnTimer(1f));
+        }
+
+        if (slimesSpawned == 25)
+        {
+            Instantiate(endGame, transform.position, Quaternion.identity);
         }
     }
 }

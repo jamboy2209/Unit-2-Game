@@ -143,7 +143,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 8865208874398379130, guid: 1146e55d5cbb3574fb8cace8770798fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -171,6 +171,7 @@ MonoBehaviour:
   MediumSlime: {fileID: 7676303729552877215}
   Spawnpoint_1: {fileID: 8521662791202699889}
   Spawnpoint_2: {fileID: 8845680134147529068}
+  audioPlayer: {fileID: 6417997414236543412, guid: 55e2989a671f05946a88fe67dd7460bb, type: 3}
 --- !u!60 &5417381000293222182
 PolygonCollider2D:
   m_ObjectHideFlags: 0

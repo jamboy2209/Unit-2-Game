@@ -14,10 +14,14 @@ public class arrowSpawner : MonoBehaviour
     public int numOfPoints;
     public float spaceBetweenPoints;
 
+    private AudioSource source;
+    public AudioClip arrowSound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        source = GetComponent<AudioSource>();
+
         points = new GameObject[numOfPoints];
         for (int i = 0; i < numOfPoints; i++)
         {
@@ -36,6 +40,7 @@ public class arrowSpawner : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            source.PlayOneShot(arrowSound, 1.0f);
             Shoot();
         }
 
